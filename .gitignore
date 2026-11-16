@@ -1,0 +1,39 @@
+# Allowlist: everything in ~/.gemini stays local unless named here.
+# This keeps OAuth credentials, .env, MCP keys, history, and new app data out of git by default.
+# To sync another file or folder, add a `!/path` line below. See SETUP.md, "Inventory".
+/*
+
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/SETUP.md
+!/LICENSE
+!/scripts/
+
+# Gemini CLI: settings (secrets as $VARS from ~/.gemini/.env), rules, and user-level folders.
+!/settings.json
+!/GEMINI.md
+!/commands/
+!/skills/
+!/agents/
+!/policies/
+
+# Antigravity CLI config: global rules, hooks, skill sources, skills, and the plugin import list.
+# mcp_config.json stays local because it holds API keys. plugins/ is large and reinstalled per device.
+!/config/
+/config/*
+!/config/AGENTS.md
+!/config/hooks.json
+!/config/hooks/
+!/config/skills.json
+!/config/skills/
+!/config/import_manifest.json
+
+# Antigravity CLI app folder: settings only. The rest is conversations, caches, and tokens.
+# If your statusLine runs a script kept here, allowlist it too, e.g. `!/antigravity-cli/statusline.sh`.
+!/antigravity-cli/
+/antigravity-cli/*
+!/antigravity-cli/settings.json
+
+# Python bytecode from skill scripts and tests.
+__pycache__/

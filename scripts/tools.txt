@@ -1,0 +1,10 @@
+# CLIs this setup needs, one per line: <command> <install hint>.
+# scripts/install.sh and scripts/verify-config-sync.sh report any that are not on PATH.
+# Add the tools your own config calls (statusline commands, hook scripts, MCP servers), and remove the CLI you do not use.
+git      install from your package manager
+python3  install from your package manager
+flock    util-linux on Linux (macOS: brew install flock)
+timeout  coreutils on Linux
+gh       optional: https://cli.github.com, then gh auth login. Lets verify confirm the repo is private
+agy      Antigravity CLI. Remove this line if you only use Gemini CLI
+gemini   npm install -g @google/gemini-cli. Remove this line if you only use Antigravity
