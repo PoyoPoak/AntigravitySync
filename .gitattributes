@@ -1,0 +1,3 @@
+# Keep LF everywhere, even when a Windows git client with core.autocrlf=true checks out this repo.
+# CRLF breaks the bash scripts in scripts/ and config/hooks/.
+* text=auto eol=lf
